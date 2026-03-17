@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Servicio de Reclutamiento · Lía RH</title>
+  <meta name="description" content="Reclutamiento operado con estructura, claridad y velocidad. Apoyo directo para cubrir vacantes importantes cuando lo necesitas." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap" rel="stylesheet" />
+  <style>
+    :root{--p:#7C3AED;--pk:#EC4899;--grad:linear-gradient(135deg,#EC4899 0%,#8B5CF6 50%,#6D28D9 100%);--gs:linear-gradient(135deg,rgba(236,72,153,.08) 0%,rgba(139,92,246,.08) 100%);--t:#0F0A1E;--t2:#4B4569;--m:#8B82A7;--bg:#F9F9FB;--w:#fff;--b:rgba(124,58,237,.1);--b2:rgba(0,0,0,.06);--sh:0 1px 3px rgba(124,58,237,.07),0 1px 2px rgba(0,0,0,.04);--shm:0 4px 24px rgba(124,58,237,.10),0 2px 8px rgba(0,0,0,.05);--shl:0 20px 60px rgba(124,58,237,.10),0 8px 24px rgba(0,0,0,.06)}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--t);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:14px 48px;display:flex;align-items:center;justify-content:space-between;background:rgba(249,249,251,.93);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--b2);transition:box-shadow .3s}
+    .nl{display:flex;align-items:center;gap:9px;text-decoration:none}
+    .nl img{height:26px;width:auto;display:block}
+    .nlt{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:18px;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .nlinks{display:flex;align-items:center;gap:3px}
+    .na{font-size:13.5px;font-weight:500;color:var(--t2);text-decoration:none;padding:7px 12px;border-radius:7px;transition:all .2s}
+    .na:hover,.na.active{color:var(--p);background:var(--gs)}
+    .nb{font-family:'DM Sans',sans-serif;font-size:13.5px;font-weight:600;color:#fff;background:var(--grad);border:none;padding:8px 17px;border-radius:7px;cursor:pointer;text-decoration:none;transition:all .2s;box-shadow:0 2px 10px rgba(124,58,237,.25)}
+    .nb:hover{transform:translateY(-1px);box-shadow:0 4px 18px rgba(124,58,237,.36)}
+    .sl{font-size:11px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--p);margin-bottom:12px}
+    .st{font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(26px,3.8vw,42px);font-weight:700;line-height:1.14;letter-spacing:-.024em;color:var(--t);max-width:580px;margin-bottom:10px}
+    .ss{font-size:15px;color:var(--t2);max-width:480px;line-height:1.6;margin-bottom:44px}
+    .g{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .bp{font-family:'DM Sans',sans-serif;font-size:15px;font-weight:600;color:#fff;background:var(--grad);border:none;padding:13px 26px;border-radius:9px;cursor:pointer;text-decoration:none;transition:all .22s;box-shadow:0 4px 18px rgba(124,58,237,.33);display:inline-flex;align-items:center;gap:7px}
+    .bp:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(124,58,237,.44)}
+    .bs{font-family:'DM Sans',sans-serif;font-size:15px;font-weight:500;color:var(--t2);background:var(--w);border:1px solid var(--b2);padding:13px 26px;border-radius:9px;cursor:pointer;text-decoration:none;transition:all .2s;box-shadow:var(--sh)}
+    .bs:hover{border-color:var(--b);color:var(--p);transform:translateY(-1px)}
+    /* HERO SERVICIO */
+    .hero{min-height:80vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:110px 24px 64px;position:relative;overflow:hidden}
+    .o1{position:absolute;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(139,92,246,.10) 0%,transparent 70%);top:-150px;left:50%;transform:translateX(-50%);pointer-events:none}
+    .hero-badge{display:inline-flex;align-items:center;gap:8px;background:var(--w);border:1px solid var(--b);border-radius:100px;padding:5px 14px 5px 9px;font-size:12.5px;font-weight:500;color:var(--p);margin-bottom:24px;box-shadow:var(--sh);animation:fu .5s ease both}
+    .badge-dot{width:7px;height:7px;border-radius:50%;background:var(--grad)}
+    h1{font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(36px,5.5vw,68px);font-weight:800;line-height:1.06;letter-spacing:-.032em;color:var(--t);max-width:760px;margin-bottom:18px;animation:fu .5s .1s ease both}
+    .hsub{font-size:clamp(15px,1.8vw,17px);color:var(--t2);max-width:500px;line-height:1.64;margin-bottom:36px;animation:fu .5s .18s ease both}
+    .hctas{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:center;animation:fu .5s .26s ease both}
+    /* CUANDO CONVIENE */
+    .cuando{padding:80px 24px;max-width:1080px;margin:0 auto}
+    .wgrid5{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:40px}
+    .wc5{background:var(--w);border:1px solid var(--b2);border-radius:14px;padding:26px 22px;transition:all .2s;box-shadow:var(--sh)}
+    .wc5:hover{border-color:var(--b);box-shadow:var(--shm);transform:translateY(-2px)}
+    .wc5-ico{width:40px;height:40px;border-radius:10px;background:var(--gs);display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+    .wc5-ico svg{width:18px;height:18px;stroke:var(--p);stroke-width:1.6;fill:none;stroke-linecap:round;stroke-linejoin:round}
+    .wc5-tit{font-family:'Bricolage Grotesque',sans-serif;font-size:14.5px;font-weight:700;color:var(--t);margin-bottom:6px}
+    .wc5-desc{font-size:12.5px;color:var(--t2);line-height:1.56}
+    /* QUÉ RECIBE */
+    .recibe{padding:72px 24px;background:var(--w);border-top:1px solid var(--b2);border-bottom:1px solid var(--b2)}
+    .ri2{max-width:1080px;margin:0 auto}
+    .rlist{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:40px}
+    .rl{background:var(--bg);border:1px solid var(--b2);border-radius:12px;padding:20px 18px;display:flex;align-items:flex-start;gap:12px;transition:all .2s}
+    .rl:hover{border-color:var(--b)}
+    .rl-num{font-family:'Bricolage Grotesque',sans-serif;font-size:22px;font-weight:800;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;flex-shrink:0;margin-top:2px}
+    .rl-tit{font-size:13.5px;font-weight:600;color:var(--t);margin-bottom:3px}
+    .rl-desc{font-size:12px;color:var(--t2);line-height:1.54}
+    /* CÓMO TRABAJA */
+    .como{padding:80px 24px;max-width:1080px;margin:0 auto}
+    .steps4{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--b2);border-radius:16px;overflow:hidden;margin-top:40px;background:var(--b2)}
+    .s4{background:var(--w);padding:28px 24px;position:relative}
+    .s4-num{font-family:'Bricolage Grotesque',sans-serif;font-size:11px;font-weight:700;letter-spacing:.1em;color:var(--p);text-transform:uppercase;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+    .s4-num::after{content:'';flex:1;height:1px;background:var(--b)}
+    .s4-tit{font-family:'Bricolage Grotesque',sans-serif;font-size:16px;font-weight:700;color:var(--t);margin-bottom:8px;letter-spacing:-.014em}
+    .s4-desc{font-size:13px;color:var(--t2);line-height:1.58}
+    /* COMPARATIVA */
+    .comp{padding:80px 24px;max-width:860px;margin:0 auto}
+    .ctable{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:40px}
+    .col{border-radius:16px;overflow:hidden;border:1px solid var(--b2)}
+    .col-head{padding:20px 24px;display:flex;align-items:center;gap:10px}
+    .col-head-sw{background:var(--gs)}
+    .col-head-srv{background:var(--t)}
+    .col-head-icon{width:36px;height:36px;border-radius:9px;background:rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center}
+    .col-head-icon svg{width:16px;height:16px;stroke:var(--p);stroke-width:1.6;fill:none;stroke-linecap:round;stroke-linejoin:round}
+    .col-head-icon-w svg{stroke:#fff}
+    .col-head-label{font-family:'Bricolage Grotesque',sans-serif;font-size:15px;font-weight:700;color:var(--t)}
+    .col-head-label-w{color:#fff}
+    .col-body{padding:20px 24px;background:var(--bg)}
+    .col-body-dark{background:rgba(15,10,30,.95)}
+    .col-item{display:flex;align-items:flex-start;gap:9px;padding:8px 0;border-bottom:1px solid var(--b2)}
+    .col-item:last-child{border-bottom:none}
+    .col-item-dark{border-bottom-color:rgba(255,255,255,.06)}
+    .col-check{width:18px;height:18px;border-radius:50%;background:var(--gs);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+    .col-check-w{background:rgba(139,92,246,.2)}
+    .col-check svg{width:9px;height:9px;stroke:var(--p);stroke-width:2.5;fill:none}
+    .col-check-w svg{stroke:#A78BFA}
+    .col-txt{font-size:13px;color:var(--t2);line-height:1.5}
+    .col-txt-w{color:rgba(255,255,255,.6)}
+    /* CTA FINAL SERVICIO */
+    .ctaf{padding:88px 24px;text-align:center}
+    .ctac{max-width:680px;margin:0 auto;background:var(--t);border-radius:26px;padding:60px 48px;box-shadow:var(--shl);position:relative;overflow:hidden}
+    .cto{position:absolute;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle,rgba(139,92,246,.2) 0%,transparent 70%);top:-100px;right:-60px;pointer-events:none}
+    .cti{position:relative;z-index:1}
+    .ctt{font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(22px,3.4vw,36px);font-weight:800;letter-spacing:-.03em;line-height:1.1;color:#fff;margin-bottom:10px}
+    .cts{font-size:14px;color:rgba(255,255,255,.5);margin-bottom:32px;line-height:1.56}
+    .ctabtns{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:center}
+    .btn-w{font-family:'DM Sans',sans-serif;font-size:14.5px;font-weight:500;color:rgba(255,255,255,.7);background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);padding:12px 24px;border-radius:9px;cursor:pointer;text-decoration:none;transition:all .2s}
+    .btn-w:hover{color:#fff;background:rgba(255,255,255,.12)}
+    footer{padding:34px 48px;border-top:1px solid var(--b2);display:flex;align-items:center;justify-content:space-between;max-width:1080px;margin:0 auto;gap:18px;flex-wrap:wrap}
+    .fb{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:16px;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-decoration:none}
+    .flinks{display:flex;gap:20px;flex-wrap:wrap}
+    .fl{font-size:12.5px;color:var(--m);text-decoration:none;transition:color .2s}
+    .fl:hover{color:var(--p)}
+    .fc{font-size:12px;color:var(--m)}
+    @keyframes fu{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+    .rv{opacity:0;transform:translateY(22px);transition:opacity .5s ease,transform .5s ease}
+    .rv.in{opacity:1;transform:translateY(0)}
+    .d1{transition-delay:.07s}.d2{transition-delay:.14s}.d3{transition-delay:.21s}.d4{transition-delay:.28s}
+    @media(max-width:900px){.steps4{grid-template-columns:1fr 1fr}}
+    @media(max-width:640px){nav{padding:12px 16px}.na{display:none}.steps4{grid-template-columns:1fr}.ctable{grid-template-columns:1fr}.ctac{padding:40px 22px}footer{flex-direction:column;align-items:flex-start;padding:32px 20px}}
+  </style>
+</head>
+<body>
+  <nav id="nav">
+    <a href="/" class="nl">
+      <img src="https://raw.githubusercontent.com/genaroliarh/liarh-landing/main/logo.png" alt="Lía" onerror="this.style.display='none'" />
+      <span class="nlt">✦ Lía</span>
+    </a>
+    <div class="nlinks">
+      <a href="/" class="na">Software</a>
+      <a href="/servicio-reclutamiento" class="na active">Servicio</a>
+      <a href="https://app.liarh.com/login" class="na">Iniciar sesión</a>
+      <a href="mailto:hola@liarh.com" class="nb">Solicitar información →</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="o1"></div>
+    <div class="hero-badge"><span class="badge-dot"></span>Servicio de reclutamiento · Lía RH</div>
+    <h1>Reclutamiento operado con <span class="g">más estructura, claridad y velocidad.</span></h1>
+    <p class="hsub">Además del software, Lía RH ofrece servicio de reclutamiento para empresas que necesitan apoyo directo para cubrir vacantes importantes.</p>
+    <div class="hctas">
+      <a href="mailto:hola@liarh.com" class="bp">Solicitar información <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a href="/" class="bs">Ver el software</a>
+    </div>
+  </section>
+
+  <!-- CUÁNDO CONVIENE -->
+  <section class="cuando">
+    <p class="sl rv">¿Cuándo conviene?</p>
+    <h2 class="st rv d1">Hay momentos en que se necesita más que una herramienta.</h2>
+    <p class="ss rv d2">El servicio tiene sentido cuando el equipo necesita ejecución, no solo organización.</p>
+    <div class="wgrid5 rv d3">
+      <div class="wc5"><div class="wc5-ico"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div><p class="wc5-tit">Sin equipo interno suficiente</p><p class="wc5-desc">Cuando no hay capacidad interna para operar el proceso con la velocidad que se necesita.</p></div>
+      <div class="wc5"><div class="wc5-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><p class="wc5-tit">Urgencia por cubrir posiciones</p><p class="wc5-desc">Vacantes clave que no pueden esperar meses. El negocio necesita avanzar ahora.</p></div>
+      <div class="wc5"><div class="wc5-ico"><svg viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></div><p class="wc5-tit">Proceso actual saturado</p><p class="wc5-desc">Cuando el volumen superó la capacidad y la calidad del proceso está cayendo.</p></div>
+      <div class="wc5"><div class="wc5-ico"><svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div><p class="wc5-tit">Perfiles clave o complejos</p><p class="wc5-desc">Roles especializados o directivos donde se necesita experiencia de búsqueda estructurada.</p></div>
+      <div class="wc5"><div class="wc5-ico"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><p class="wc5-tit">Combinación de ejecución y estructura</p><p class="wc5-desc">Empresas que quieren proceso ordenado y apoyo operativo al mismo tiempo.</p></div>
+    </div>
+  </section>
+
+  <!-- QUÉ RECIBE -->
+  <section class="recibe">
+    <div class="ri2">
+      <p class="sl rv">Qué recibe el cliente</p>
+      <h2 class="st rv d1">Acompañamiento operativo, no promesas vagas.</h2>
+      <p class="ss rv d2">Entregables claros en cada etapa del proceso.</p>
+      <div class="rlist rv d3">
+        <div class="rl"><span class="rl-num">01</span><div><p class="rl-tit">Levantamiento de perfil</p><p class="rl-desc">Sesión de alineación con el hiring manager para entender el rol, el equipo y el contexto real.</p></div></div>
+        <div class="rl"><span class="rl-num">02</span><div><p class="rl-tit">Definición de criterios</p><p class="rl-desc">Estructura de evaluación con criterios ponderados antes de empezar la búsqueda.</p></div></div>
+        <div class="rl"><span class="rl-num">03</span><div><p class="rl-tit">Publicación y gestión</p><p class="rl-desc">Vacante publicada en la career page de la empresa. Recepción y organización de candidatos.</p></div></div>
+        <div class="rl"><span class="rl-num">04</span><div><p class="rl-tit">Filtrado y priorización</p><p class="rl-desc">Evaluación de perfiles con criterios claros. Descarte justificado. Sin subjetividad.</p></div></div>
+        <div class="rl"><span class="rl-num">05</span><div><p class="rl-tit">Shortlist entregado</p><p class="rl-desc">Perfiles priorizados con contexto: experiencia, score, idiomas, disponibilidad.</p></div></div>
+        <div class="rl"><span class="rl-num">06</span><div><p class="rl-tit">Seguimiento del proceso</p><p class="rl-desc">Acompañamiento hasta la decisión final. Comunicación ordenada con el equipo.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CÓMO TRABAJA -->
+  <section class="como">
+    <p class="sl rv">Cómo trabajamos</p>
+    <h2 class="st rv d1">Cuatro pasos. Sin fricción.</h2>
+    <p class="ss rv d2">Un proceso claro desde el inicio hasta la decisión.</p>
+    <div class="steps4 rv d3">
+      <div class="s4"><p class="s4-num">01</p><h3 class="s4-tit">Entendemos la vacante</h3><p class="s4-desc">Conocemos el rol, el equipo, el contexto y las prioridades reales del negocio.</p></div>
+      <div class="s4"><p class="s4-num">02</p><h3 class="s4-tit">Estructuramos el proceso</h3><p class="s4-desc">Definimos criterios de evaluación, plazos y flujo de comunicación antes de empezar.</p></div>
+      <div class="s4"><p class="s4-num">03</p><h3 class="s4-tit">Buscamos y filtramos</h3><p class="s4-desc">Recibimos candidatos, evaluamos perfiles y entregamos un shortlist priorizado con contexto.</p></div>
+      <div class="s4"><p class="s4-num">04</p><h3 class="s4-tit">Acompañamos la decisión</h3><p class="s4-desc">Apoyamos el proceso de entrevistas, retroalimentación y cierre hasta el final.</p></div>
+    </div>
+  </section>
+
+  <!-- COMPARATIVA -->
+  <section class="comp">
+    <p class="sl rv">Software vs Servicio</p>
+    <h2 class="st rv d1">¿Qué necesitas tú?</h2>
+    <p class="ss rv d2">Dos ofertas distintas para necesidades distintas. Claras, sin mezclarlas.</p>
+    <div class="ctable rv d3">
+      <div class="col">
+        <div class="col-head col-head-sw">
+          <div class="col-head-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+          <span class="col-head-label">Software Lía</span>
+        </div>
+        <div class="col-body">
+          <p style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--m);margin-bottom:12px;">Ideal para</p>
+          <div class="col-item"><div class="col-check"><svg viewBox="0 0 10 10"><polyline points="2 5 4 7 8 3"/></svg></div><span class="col-txt">Equipos que ya reclutan internamente</span></div>
+          <div class="col-item"><div class="col-check"><svg viewBox="0 0 10 10"><polyline points="2 5 4 7 8 3"/></svg></div><span class="col-txt">Empresas que quieren orden y visibilidad</span></div>
+          <div class="col-item"><div class="col-check"><svg viewBox="0 0 10 10"><polyline points="2 5 4 7 8 3"/></svg></div><span class="col-txt">Organizaciones que operan su propio proceso</span></div>
+          <div class="col-item"><div class="col-check"><svg viewBox="0 0 10 10"><polyline points="2 5 4 7 8 3"/></svg></div><span class="col-txt">Equipos con volumen alto de candidatos</span></div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="col-head col-head-srv">
+          <div class="col-head-icon col-head-icon-w"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
+          <span class="col-head-label col-head-label-w">Servicio de reclutamiento</span>
+        </div>
+        <div class="col-body col-body-dark">
+          <p style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:12px;">Ideal para</p>
+          <div class="col-item col-item-dark"><div class="col-check col-check-w"><svg viewBox="0 0 10 10"><polyline points="2 5 4 7 8 3"/></svg></div><span class="col-txt col-txt-w">Empresas que necesitan apoyo directo</span></div>
+          <div class="col-item col-item-dark"><div class="col-check col-check-w"><svg viewBox="0 0 10 10"><polyline points="2 5 4 7 8 3"/></svg></div><span class="col-txt col-txt-w">Equipos saturados o sin HR interno</span></div>
+          <div class="col-item col-item-dark"><div class="col-check col-check-w"><svg viewBox="0 0 10 10"><polyline points="2 5 4 7 8 3"/></svg></div><span class="col-txt col-txt-w">Vacantes clave o urgentes</span></div>
+          <div class="col-item col-item-dark"><div class="col-check col-check-w"><svg viewBox="0 0 10 10"><polyline points="2 5 4 7 8 3"/></svg></div><span class="col-txt col-txt-w">Cuando se necesita ejecución + estructura</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="ctaf">
+    <div class="ctac rv">
+      <div class="cto"></div>
+      <div class="cti">
+        <h2 class="ctt">¿Necesitas plataforma, apoyo operativo o ambos?</h2>
+        <p class="cts">Cuéntanos qué necesitas. En menos de 24 horas te respondemos.</p>
+        <div class="ctabtns">
+          <a href="mailto:hola@liarh.com" class="bp" style="font-size:15px;padding:13px 26px;">Solicitar información <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a href="/" class="btn-w">Ver el software →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <a href="/" class="fb">✦ Lía</a>
+    <div class="flinks">
+      <a href="/" class="fl">Software</a>
+      <a href="/servicio-reclutamiento" class="fl">Servicio</a>
+      <a href="https://app.liarh.com/login" class="fl">Iniciar sesión</a>
+      <a href="mailto:hola@liarh.com" class="fl">hola@liarh.com</a>
+    </div>
+    <p class="fc">© 2025 Lía RH · México</p>
+  </footer>
+
+  <script>
+    const io=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.08,rootMargin:'0px 0px -28px 0px'});
+    document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+    window.addEventListener('scroll',()=>{document.getElementById('nav').style.boxShadow=window.scrollY>14?'0 2px 18px rgba(0,0,0,.05)':'none'},{passive:true});
+  </script>
+</body>
+</html>
