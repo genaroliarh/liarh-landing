@@ -1,0 +1,6 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/servicio-reclutamiento", "destination": "/servicio-reclutamiento.html" }
+  ]
+}
